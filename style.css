@@ -1,0 +1,466 @@
+html {
+    font-size: 14px;
+    line-height: 18px;
+    color: #1B1C21;
+    font-family: TT Lakes, sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('assets/fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('assets/fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TTLakes-Regular.woff') format('woff'),
+        url('assets/fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('assets/fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('assets/fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TTLakes-Bold.woff') format('woff'),
+        url('assets/fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('assets/fonts/TTLakes-Italic.eot');
+    src: local('TT Lakes Italic'), local('TTLakes-Italic'),
+        url('assets/fonts/TTLakes-Italic.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TTLakes-Italic.woff') format('woff'),
+        url('assets/fonts/TTLakes-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('assets/fonts/TTLakes-BoldItalic.eot');
+    src: local('TT Lakes Bold Italic'), local('TTLakes-BoldItalic'),
+        url('assets/fonts/TTLakes-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TTLakes-BoldItalic.woff') format('woff'),
+        url('assets/fonts/TTLakes-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #F8F8F8;
+}
+
+a, button,
+.options__repair::before,
+.options__check-status::before {
+    cursor: pointer;
+}
+
+/* скрываю блок кнопок */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.body__header {
+    height: 88px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9FFF5;
+}
+
+.header__navigation {
+    justify-content: space-between;
+    height: 88px;
+}
+
+.header__navigation,
+.header__main-nav,
+.header__options,
+.options__option-group,
+.main__menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.header__main-nav,
+.options__option-group {
+    gap: 16px;
+}
+
+.header__main-nav {
+    margin-left: 16px;
+}
+
+.header__options {
+    margin-right: 16px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li > * {
+    display: block;
+}
+
+.header__button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: no-repeat center #FF3E79;
+    border-radius: 50%;
+    border: none;
+}
+
+.header__burger .header__button {
+    background-image: url(assets/img/burger.svg);
+}
+
+.options__call .header__button {
+    background-image: url(assets/img/call.svg);
+}
+
+.options__chat .header__button {
+    background-image: url(assets/img/chat.svg);
+}
+
+.options__profile .header__button {
+    background-image: url(assets/img/profile.svg);
+}
+
+.options__repair .header__button {
+    background-image: url(assets/img/repair.svg);
+}
+
+.options__check-status .header__button {
+    background-image: url(assets/img/check-status.svg);
+}
+
+/* divider */
+.header__main-nav::after {
+    display: block;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+    content: "";
+}
+
+.main__title {
+    margin: 24px 16px;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    text-align: left;
+}
+
+.main__title::before {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    content: "";
+}
+
+.main__navigation {
+    margin: 24px 0;
+    height: 40px;
+}
+
+.main__menu {
+    overflow: scroll;
+    gap: 8px;
+}
+
+.main__menu::-webkit-scrollbar {
+    width: 0;
+}
+
+.menu__item {
+    padding: 6px 14px;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.menu__item a:any-link {
+    text-decoration: none;
+    color: #7E7E82;
+}
+
+.menu__item:hover {
+    background-color: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.menu__item:first-child {
+    margin-left: 16px;
+}
+
+.about-cps__info {
+    margin: 16px;
+}
+
+.about-cps__text {
+    overflow: hidden;
+    height: 90px;
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+    text-align: left;
+}
+
+.about-cps__paragraph {
+    margin-top: 0;
+}
+
+.about-cps__paragraph:first-child {
+    margin-bottom: 18px;
+}
+
+.about-cps__read-more::before {
+    display: block;
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
+    background: no-repeat center url(assets/img/expand.svg);
+    content: "";
+}
+
+.about-cps__read-more {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: TT Lakes, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    background-color: #F8F8F8;
+    border: none;
+}
+
+.about-cps__picture img {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header__main-nav::after {
+        display: none;
+    }
+
+    .header__main-nav,
+    .header__options {
+        gap: 20px;
+    }
+
+    .header__main-nav {
+        margin-left: 24px;
+    }
+
+    .header__options {
+        margin-right: 24px;
+    }
+
+    .header__burger {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__burger::after {
+        display: block;
+        margin-left: 20px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+        content: "";
+    }
+
+    .visually-hidden {
+        position: static;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin: 0;
+        clip-path: none;
+        clip: auto;
+        overflow: visible;
+    }
+
+    .visually-hidden::after {
+        display: block;
+        margin-left: 20px;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+        content: "";
+    }
+
+    .main__title {
+        margin: 24px 24px 32px;
+    }
+
+    .main__navigation {
+        margin: 32px 0;
+    }
+
+    .menu__item:first-child {
+        margin-left: 24px;
+    }
+
+    .main__about-cps {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .about-cps__info {
+        margin: 0 48px 0 24px;
+    }
+
+    .about-cps__text {
+        max-width: 460px;
+        height: 160px;
+    }
+
+    .about-cps__picture {
+        margin-right: 24px;
+        margin-left: auto;
+    }
+
+    .about-cps__picture img {
+        border-radius: 6px;
+    }
+}
+
+@media (min-width: 1120px) {
+    /* "скрываю" хэдер */
+    .body__header {
+        height: 82px;
+        background-color: #F8F8F8;
+        border: none;
+    }
+
+    .header__navigation {
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 82px;
+    }
+
+    .header__options {
+        margin: 42px 32px 0 0;
+    }
+
+    .options__order-options .options__option-group {
+        align-items: flex-end;
+    }
+
+    .header__main-nav,
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .main__title {
+        position: absolute;
+        top: 42px;
+        left: 32px;
+        margin: 0;
+    }
+
+    .main__title::before {
+        left: -32px;
+    }
+
+    .options__order-options .options__option-group {
+        gap: 32px;
+    }
+
+    .options__repair,
+    .options__check-status {
+        display: flex;
+        align-items: center;
+    }
+
+    .options__repair::before {
+        display: block;
+        margin-right: 8px;
+        font-size: 16px;
+        content: "Оставить заявку";
+    }
+
+    .options__check-status::before {
+        display: block;
+        margin-right: 8px;
+        font-size: 16px;
+        content: "Статус ремонта";
+    }
+
+    .main__navigation {
+        margin: 12px 0;
+        height: auto;
+    }
+
+    .main__menu {
+        overflow: visible;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .menu__item,
+    .menu__item:first-child {
+        margin-left: 32px;
+        padding: 6px 10px;
+    }
+
+    .about-cps__info {
+        margin: 0 36px 0 34px;
+    }
+
+    .about-cps__text {
+        max-width: 900px;
+        height: auto;
+    }
+
+    .about-cps__picture {
+        margin-right: 30px;
+    }
+}
