@@ -6,38 +6,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body class="body">
+    <body>
         <header class="body__header header">
             <nav class="header__navigation">
                 <ul class="header__main-nav">
                     <li class="header__burger">
-                        <button class="header__button"></button>
+                        <button class="header__button">
+                            <img src="assets/img/burger.svg" alt="Показать боковое меню">
+                        </button>
                     </li>
                     <li class="header__logo">
-                        <img src="assets/img/logo.svg" alt="CPS Logo">
+                        <img src="assets/img/logo.svg" alt="Логотип CPS">
                     </li>
                 </ul>
                 <ul class="header__options options">
-                    <li class="options__personal-options visually-hidden">
+                    <li class="options__personal-options">
                         <ul class="options__option-group">
                             <li class="options__call">
-                                <button class="header__button"></button>
+                                <button class="header__button">
+                                    <img src="assets/img/call.svg" alt="Заказать звонок">
+                                </button>
                             </li>
                             <li class="options__chat">
-                                <button class="header__button"></button>
+                                <button class="header__button">
+                                    <img src="assets/img/chat.svg" alt="Написать в поддержку">
+                                </button>
                             </li>
                             <li class="options__profile">
-                                <button class="header__button"></button>
+                                <button class="header__button">
+                                    <img src="assets/img/profile.svg" alt="Профиль">
+                                </button>
                             </li>
                         </ul>
                     </li>
                     <li class="options__order-options">
                         <ul class="options__option-group">
                             <li class="options__repair">
-                                <button class="header__button"></button>
+                                <label for="repair-button" class="options__description">
+                                    Оставить заявку
+                                </label>
+                                <button class="header__button" id="repair-button">
+                                    <img src="assets/img/repair.svg" alt="Оставить заявку">
+                                </button>
                             </li>
                             <li class="options__check-status">
-                                <button class="header__button"></button>
+                                <label for="check-status-button" class="options__description">
+                                    Статус ремонта
+                                </label>
+                                <button class="header__button" id="check-status-button">
+                                    <img src="assets/img/check-status.svg" alt="Статус ремонта">
+                                </button>
                             </li>
                         </ul>
                     </li>
@@ -83,12 +101,19 @@
                             в&nbsp;свою очередь, советуют нас родным и близким.
                         </p>
                     </div>
-                    <button class="about-cps__read-more">Читать далее</button>
+                    <button class="about-cps__read-more read-more" id="expand-button">
+                        <img src="assets/img/expand.svg" alt="Развернуть текст">
+                        <label for="expand-button" class="read-more__expand-description">
+                            Читать далее
+                        </label>
+                    </button>
                 </div>
-                <picture class="about-cps__picture">
-                    <source srcset="assets/img/cps.jpg" media="(min-width: 768px)">
-                    <img src="assets/img/cps-min.jpg" alt="CPS">
-                </picture>
+                <div class="about-cps__picture-container">
+                    <picture class="about-cps__picture">
+                        <source srcset="assets/img/cps.jpg" media="(min-width: 768px)">
+                        <img src="assets/img/cps-min.jpg" alt="CPS">
+                    </picture>
+                </div>
             </section>
         </main>
     </body>
