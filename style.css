@@ -78,7 +78,7 @@ label[for]:hover {
     display: none;
 }
 
-.body__header {
+.header {
     background-color: #FFFFFF;
     border-bottom: 1px solid #D9FFF5;
 }
@@ -329,7 +329,7 @@ li > * {
 }
 
 @media (min-width: 1120px) {
-    .body__header {
+    .header {
         height: 82px;
         background-color: #F8F8F8;
         border: none;

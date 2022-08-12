@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../assets/fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('../assets/fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/TTLakes-Regular.woff') format('woff'),
+        url('../assets/fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../assets/fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('../assets/fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/TTLakes-Bold.woff') format('woff'),
+        url('../assets/fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../assets/fonts/TTLakes-Italic.eot');
+    src: local('TT Lakes Italic'), local('TTLakes-Italic'),
+        url('../assets/fonts/TTLakes-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/TTLakes-Italic.woff') format('woff'),
+        url('../assets/fonts/TTLakes-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../assets/fonts/TTLakes-BoldItalic.eot');
+    src: local('TT Lakes Bold Italic'), local('TTLakes-BoldItalic'),
+        url('../assets/fonts/TTLakes-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/TTLakes-BoldItalic.woff') format('woff'),
+        url('../assets/fonts/TTLakes-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+html {
+    font-size: 14px;
+    line-height: 18px;
+    color: #1B1C21;
+    font-family: TT Lakes, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Обнуление margin и padding */
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+a, button {
+    border: none;
+    text-decoration: none;
+    font-style: normal;
+    color: inherit;
+}
+
+a:hover, button:hover,
+label[for]:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 320px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.header__navigation {
+    justify-content: space-between;
+}
+
+.header__navigation,
+.header__left-group,
+.sidebar__menu,
+.footer__options,
+.footer__address,
+.footer__localization {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.sidebar__menu,
+.footer__address {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+ul {
+    list-style: none;
+}
+
+li > * {
+    display: block;
+}
+
+.header__button,
+.footer__button {
+    width: 40px;
+    height: 40px;
+    background: no-repeat center #FF3E79;
+    border-radius: 50%;
+}
+
+.header__button:hover,
+.footer__button:hover {
+    background-color: #da3868;
+}
+
+.header__button img,
+.footer__button img {
+    display: block;
+    margin: 0 auto;
+}
+
+.header__logo {
+    padding: 18px 0;
+}
+
+.header__left-group,
+.footer__options {
+    margin-left: 24px;
+    gap: 16px;
+}
+
+.header__search-button {
+    margin-right: 24px;
+}
+
+.sidebar__menu {
+    padding: 32px 24px;
+    gap: 32px;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.menu__item::before {
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 32px;
+    border-right: 4px solid transparent;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    content: "";
+}
+
+.menu__item:hover::before {
+    border-right: 4px solid #41F6D7;
+}
+
+.header__button,
+.footer__button,
+.menu__item::before,
+.menu__link,
+.localization__option {
+    transition: all 0.3s;
+}
+
+.footer__address {
+    padding: 16px 24px 40px;
+    gap: 12px;
+}
+
+.address__email {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.address__tel {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    text-align: left;
+}
+
+.footer__localization {
+    padding: 0 24px 32px;
+    gap: 7px;
+}
+
+.localization__button {
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.menu__item:hover,
+.localization__option:hover {
+    color: #7E7E82;
+}
+
+/* Тень */
+@media (min-width: 321px) and (max-width: 1439px) {
+    .sidebar {
+        box-shadow: 16px 0px 52px 0px #0E185033;
+    }
+}
