@@ -7,65 +7,63 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header class="header">
-            <nav class="header__navigation">
-                <ul class="header__main-nav">
-                    <li class="header__burger">
-                        <button class="header__button">
-                            <img src="assets/img/burger.svg" alt="Показать боковое меню">
-                        </button>
-                    </li>
-                    <li class="header__logo">
-                        <img src="assets/img/logo.svg" alt="Логотип CPS">
-                    </li>
-                </ul>
-                <ul class="header__options options">
-                    <li class="options__personal-options">
-                        <ul class="options__option-group">
-                            <li class="options__call">
-                                <button class="header__button">
-                                    <img src="assets/img/call.svg" alt="Заказать звонок">
-                                </button>
-                            </li>
-                            <li class="options__chat">
-                                <button class="header__button">
-                                    <img src="assets/img/chat.svg" alt="Написать в поддержку">
-                                </button>
-                            </li>
-                            <li class="options__profile">
-                                <button class="header__button">
-                                    <img src="assets/img/profile.svg" alt="Профиль">
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="options__order-options">
-                        <ul class="options__option-group">
-                            <li class="options__repair">
-                                <label for="repair-button" class="options__description">
-                                    Оставить заявку
-                                </label>
-                                <button class="header__button" id="repair-button">
-                                    <img src="assets/img/repair.svg" alt="Оставить заявку">
-                                </button>
-                            </li>
-                            <li class="options__check-status">
-                                <label for="check-status-button" class="options__description">
-                                    Статус ремонта
-                                </label>
-                                <button class="header__button" id="check-status-button">
-                                    <img src="assets/img/check-status.svg" alt="Статус ремонта">
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main class="main">
-            <h1 class="main__title">Услуги и сервисы</h1>
-            <nav class="main__navigation">
-                <ul class="main__menu menu">
+        <div class="desktop-container">
+            <header class="header">
+                <nav class="header__navigation">
+                    <ul class="header__main-nav">
+                        <li class="header__burger">
+                            <button class="header__button">
+                                <img src="assets/img/burger.svg" alt="Show sidebar">
+                            </button>
+                        </li>
+                        <li class="header__logo">
+                            <a class="header__link" href="#">
+                                <img src="assets/img/logo.svg" alt="CPS Logo">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__options options">
+                        <li class="options__personal-options">
+                            <ul class="options__option-group">
+                                <li class="options__call">
+                                    <button class="header__button">
+                                        <img src="assets/img/call.svg" alt="Request a call">
+                                    </button>
+                                </li>
+                                <li class="options__chat">
+                                    <button class="header__button">
+                                        <img src="assets/img/chat.svg" alt="Contact support">
+                                    </button>
+                                </li>
+                                <li class="options__profile">
+                                    <button class="header__button">
+                                        <img src="assets/img/profile.svg" alt="Profile">
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="options__order-options">
+                            <ul class="options__option-group">
+                                <li class="options__repair">
+                                    <span class="options__description">Оставить заявку</span>
+                                    <button class="header__button">
+                                        <img src="assets/img/repair.svg" alt="Submit a repair request">
+                                    </button>
+                                </li>
+                                <li class="options__check-status">
+                                    <span class="options__description">Статус ремонта</span>
+                                    <button class="header__button">
+                                        <img src="assets/img/check-status.svg" alt="Repair status">
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 class="title">Услуги и сервисы</h1>
+            <nav class="navigation">
+                <ul class="navigation__menu menu">
                     <li class="menu__item">
                         <a class="menu__link" href="#">Ремонтируемые бренды</a>
                     </li>
@@ -86,35 +84,37 @@
                     </li>
                 </ul>
             </nav>
-            <section class="main__about-cps about-cps">
-                <div class="about-cps__info">
-                    <div class="about-cps__text">
-                        <p class="about-cps__paragraph">
-                            Мы являемся авторизованным сервисным центром по&nbsp;ремонту техники Dell. 
-                            Только у&nbsp;нас вы можете отремонтировать свой ноутбук Dell 
-                            с&nbsp;официальной гарантией производителя.
-                        </p>
-                        <p class="about-cps__paragraph">
-                            Мы успешно работаем с&nbsp;1992 года и заслужили репутацию надежного 
-                            партнера, что подтверждает большое количество постоянных клиентов. 
-                            Мы гордимся тем, что к&nbsp;нам обращаются по&nbsp;рекомендациям и, 
-                            в&nbsp;свою очередь, советуют нас родным и близким.
-                        </p>
+            <main class="main">
+                <section class="main__about-cps about-cps">
+                    <div class="about-cps__info">
+                        <div class="about-cps__text">
+                            <p class="about-cps__paragraph">
+                                Мы являемся авторизованным сервисным центром по&nbsp;ремонту техники Dell. 
+                                Только у&nbsp;нас вы можете отремонтировать свой ноутбук Dell 
+                                с&nbsp;официальной гарантией производителя.
+                            </p>
+                            <p class="about-cps__paragraph">
+                                Мы успешно работаем с&nbsp;1992 года и заслужили репутацию надежного 
+                                партнера, что подтверждает большое количество постоянных клиентов. 
+                                Мы гордимся тем, что к&nbsp;нам обращаются по&nbsp;рекомендациям и, 
+                                в&nbsp;свою очередь, советуют нас родным и близким.
+                            </p>
+                        </div>
+                        <button class="about-cps__read-more read-more">
+                            <img src="assets/img/expand.svg" alt="Expand text">
+                            <span class="read-more__expand-description">
+                                Читать далее
+                            </span>
+                        </button>
                     </div>
-                    <button class="about-cps__read-more read-more" id="expand-button">
-                        <img src="assets/img/expand.svg" alt="Развернуть текст">
-                        <label for="expand-button" class="read-more__expand-description">
-                            Читать далее
-                        </label>
-                    </button>
-                </div>
-                <div class="about-cps__picture-container">
-                    <picture class="about-cps__picture">
-                        <source srcset="assets/img/cps.jpg" media="(min-width: 768px)">
-                        <img src="assets/img/cps-min.jpg" alt="CPS">
-                    </picture>
-                </div>
-            </section>
-        </main>
+                    <div class="about-cps__picture-container">
+                        <picture class="about-cps__picture">
+                            <source srcset="assets/img/cps.jpg" media="(min-width: 768px)">
+                            <img src="assets/img/cps-min.jpg" alt="CPS">
+                        </picture>
+                    </div>
+                </section>
+            </main>
+        </div>
     </body>
 </html>
