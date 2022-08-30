@@ -100,7 +100,7 @@ label[for]:hover {
 .sidebar-menu,
 .sidebar-footer__options,
 .sidebar-footer__address,
-.sidebar-footer__localization {
+.localization {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -134,12 +134,15 @@ li > * {
     background-color: #da3868;
 }
 
-.sidebar-header__logo {
-    margin: 18px 0;
+.sidebar-header__navigation {
+    margin-top: 18px;
 }
 
-.sidebar-header__left-group,
-.sidebar-footer__options {
+.logo {
+    height: 52px;
+}
+
+.sidebar-header__left-group {
     margin-left: 24px;
     gap: 16px;
 }
@@ -183,8 +186,16 @@ li > * {
     transition: all 0.3s;
 }
 
+.sidebar-footer {
+    margin-left: 24px;
+}
+
+.sidebar-footer__options {
+    gap: 16px;
+}
+
 .sidebar-footer__address {
-    margin: 16px 0 40px 24px;
+    margin: 16px 0 40px;
     gap: 12px;
 }
 
@@ -203,9 +214,12 @@ li > * {
     text-align: left;
 }
 
-.sidebar-footer__localization {
-    margin: 0 0 32px 24px;
+.localization {
     gap: 7px;
+}
+
+.sidebar-footer__localization {
+    margin-bottom: 32px;
 }
 
 .localization__option {
@@ -238,7 +252,7 @@ li > * {
 }
 
 /* Тень */
-@media (min-width: 321px) and (max-width: 1439px) {
+@media (max-width: 1399px) {
     .sidebar {
         box-shadow: 16px 0px 52px 0px #0E185033;
     }
